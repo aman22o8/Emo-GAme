@@ -1,0 +1,22 @@
+/* Write your code here. */
+.main_container {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #9796f0, #fbc7d4);
+}
+
+.footer {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.emoji_list {
+  list-style-type: none;
+  flex-wrap: wrap;
+  display: flex;
+  width: 80%;
+  margin: 0px;
+  padding: 0px;
+}

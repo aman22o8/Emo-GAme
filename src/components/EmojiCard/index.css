@@ -1,0 +1,20 @@
+/* Write your code here. */
+.each_list_container {
+  margin: 12px;
+  border-radius: 7px;
+  border: 2px solid #ffffff;
+  background-color: #ffffff50;
+}
+.btn_emoji {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  /* width: 80%;
+  height: 80%; */
+  background-color: transparent;
+}
+.my_logo {
+  height: 55px;
+  width: 55px;
+  padding: 2px;
+}
