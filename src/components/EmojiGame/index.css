@@ -20,3 +20,9 @@
   margin: 0px;
   padding: 0px;
 }
+
+@media Screen and (min-width: 768px) {
+  .emoji_list {
+    width: 53%;
+  }
+}
