@@ -4,7 +4,6 @@ import './index.css'
 const NavBar = props => {
   const {initialScore, totalScore, showCard} = props
   //   console.log(initialScore)
-  const displayScore = showCard ? 'show' : ''
 
   return (
     <div className="header">
@@ -16,9 +15,19 @@ const NavBar = props => {
         />
         <h1 className="logo_heading">Emoji Game</h1>
       </div>
-      <div className={`showmy_Score ${displayScore}`}>
-        <p className="score_heading">Score: {initialScore}</p>
-        <p className="score_heading">Top Score: {Math.max(...totalScore)}</p>
+      <div className={`showmy_Score `}>
+        {showCard ? (
+          ''
+        ) : (
+          <p className={`score_heading `}>Score: {initialScore}</p>
+        )}
+        {showCard ? (
+          ''
+        ) : (
+          <p className={`score_heading `}>
+            Top Score: {Math.max(...totalScore)}
+          </p>
+        )}
       </div>
     </div>
   )

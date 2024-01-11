@@ -29,21 +29,21 @@ class EmojiGame extends Component {
   myClickemoji = id => {
     const {emojisList} = this.props
     emojisList.sort(() => Math.random() - 0.5)
-    const {myArray, initialScore} = this.state
+    const {myArray} = this.state
     if (myArray.includes(id)) {
-      this.setState({showCard: true, initialScore: myArray.length})
+      this.setState({showCard: true, myArray: [], initialScore: myArray.length})
     } else {
-      if (initialScore !== 11) {
+      if (emojisList.length - 1 === myArray.length) {
         this.setState(prevState => ({
-          myArray: [...prevState.myArray, id],
-          initialScore: prevState.initialScore + 1,
+          //   totalScore: [...prevState.totalScore, emojisList.length],
+          initialScore: myArray.length,
+          showCard: true,
+          isWin: true,
         }))
       }
       this.setState(prevState => ({
         myArray: [...prevState.myArray, id],
         initialScore: prevState.initialScore + 1,
-        showCard: true,
-        isWin: true,
       }))
     }
   }
@@ -53,14 +53,17 @@ class EmojiGame extends Component {
     this.setState(prevState => ({
       totalScore: [...prevState.totalScore, initialScore],
       initialScore: 0,
+      myArray: [],
       showCard: false,
       isWin: false,
     }))
   }
 
   render() {
-    const {initialScore, totalScore, isWin, showCard} = this.state
+    const {initialScore, totalScore, isWin, showCard, myArray} = this.state
+    console.log(initialScore)
     console.log(totalScore)
+    console.log(myArray)
     const {emojisList} = this.props
 
     return (

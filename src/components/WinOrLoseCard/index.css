@@ -15,6 +15,28 @@
   height: 250px;
   width: 150px;
 }
+.bottom_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media Screen and (min-width: 768px) {
+  .result_container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 6%;
+  }
+  .loose_img {
+    height: 350px;
+    width: 240px;
+    order: 1;
+  }
+  .bottom_left {
+    order: 0;
+  }
+}
 .result_heading {
   font: 500 25px 'Roboto';
   color: #ffffff;
@@ -39,4 +61,31 @@
   width: 100px;
   margin-top: 10px;
   cursor: pointer;
+}
+@media Screen and (min-width: 768px) {
+  .result_heading {
+    font: 500 37px 'Roboto';
+    margin: 25px 0px;
+  }
+  .your_score {
+    font: 500 35px 'Roboto';
+    margin-top: 25px;
+  }
+  .your_result {
+    font: 500 45px 'Roboto';
+    color: #6a59ff;
+
+    margin-bottom: 15px;
+  }
+  .mybtn {
+    border: none;
+    background-color: #ffce27;
+    border-radius: 20px;
+    font: 500 15px 'Roboto';
+    color: #3d3d3d;
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
 }

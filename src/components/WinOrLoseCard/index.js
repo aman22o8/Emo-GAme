@@ -12,17 +12,20 @@ const WinOrLoseCard = props => {
   }
   return (
     <div className="result_container">
-      <img
-        className="loose_img"
-        src={imageWinLose}
-        alt={isWin ? 'win' : 'lose'}
-      />
-      <h1 className="result_heading">{isWin ? 'You Won' : 'You Lose'}</h1>
-      <p className="your_score">{isWin ? 'Best Score' : 'Score'} </p>
-      <p className="your_result">{initialScore}/12</p>
-      <button onClick={handleplayAgain} type="button" className="mybtn">
-        Play Again
-      </button>
+      <img className="loose_img" src={imageWinLose} alt="win or lose" />
+      <div className="bottom_left">
+        <h1 className="result_heading">{isWin ? 'You Won' : 'You Lose'}</h1>
+        {isWin ? (
+          <p className="your_score">Best Score</p>
+        ) : (
+          <p className="your_score">Score</p>
+        )}
+
+        <p className="your_result">{initialScore}/12</p>
+        <button onClick={handleplayAgain} type="button" className="mybtn">
+          Play Again
+        </button>
+      </div>
     </div>
   )
 }
